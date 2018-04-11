@@ -1,0 +1,12 @@
+<!--<p>
+  search works!
+</p>-->
+<div>
+  <input type= "text" name="searchTxt" [(ngModel)]="searchTxt" (keyup)="onKeyUp($event)">
+  <button (click) = "getUsers()">Search</button>
+</div>
+<p>Your search keyword is "{{searchTxt}}" </p>
+<p>{{searchCount}}</p>
+<ol *ngIf= "searchResult">
+  <li *ngFor = "let user of searchResult.items">{{user.login}}</li>
+</ol>
