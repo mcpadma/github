@@ -1,0 +1,12 @@
+.profile-img{
+    height:50px;
+    width:50px;
+}
+.example-card{
+    width:100px;
+    float:left;
+    margin: 5px;
+}
+.mat-card-avatar{
+flex-shrink: 1;
+}

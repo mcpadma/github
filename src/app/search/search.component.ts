@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../github/github.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -15,7 +16,7 @@ export class SearchComponent implements OnInit {
   public searchResult;
   public searchCount;
 
-  constructor(private githubService: GithubService) { }
+  constructor(private githubService: GithubService,private router:Router) { }
 
   ngOnInit() {
     this.searchTxt = this.searchTxt;
@@ -31,5 +32,10 @@ getUsers(){
      this.searchCount = res.total_count;
     }
   );
+}
+
+showUserDetail(user){
+  console.log("Hello");
+this.router.navigate(['user', user.login]);
 }
 }

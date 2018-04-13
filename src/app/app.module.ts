@@ -9,19 +9,21 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { GithubService } from './github/github.service';
 
-// import { MaterialModule } from '@angular/material';
+import { MaterialModule } from './material.module';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpModule,
-    //  MaterialModule.forRoot()
+    MaterialModule
   ],
   providers: [GithubService],
   bootstrap: [AppComponent]
